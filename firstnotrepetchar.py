@@ -1,5 +1,5 @@
 from collections import *
-
+#method1
 s = "qwewwwwwweeerrreedgggheetdfdfl"
 
 d = Counter(s)
@@ -10,7 +10,7 @@ for k,v in d.items():
     if(v == 1):
         print("first non repeting character is :",k)
         break
-
+#method2
 d1 = {}
 count = 0
 for i in s:
