@@ -14,14 +14,14 @@ int main()
     cout<<str<<endl;
 
     stringstream ss(str);
-
+    // method1 : reverse of original string will be copied into tem string
     for(int i = str.length()-1;i<str.length();i-- )
     {
         str1+=str[i];
     }
 
     cout<<"reverse::"<<str1<<endl;
-
+    // original string will reversed
     string ss1 = "Sivakumari";
     for(int i = 0,j= ss1.length()-1 ;i<ss1.length();i++,j--)
     {
