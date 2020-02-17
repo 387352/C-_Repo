@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string>
+#include "map"
+
+using namespace std;
+
+class Base
+{
+   public:
+   virtual void f1()
+        {
+                cout<<"I am base"<<endl;
+        }
+};
+class child : public Base
+{
+        public:
+        void f1()
+        {
+                cout<<"I am child"<<endl;
+        }
+};
+
+int main()
+{
+
+child  *c1 = new child;
+Base *bp = dynamic_cast<Base*>(c1);
+
+map<int,Base*> mp;
+
+mp.insert(std::pair<int,Base*>(1,bp));
+map<int,Base*>::iterator it1 = mp.begin();
+
+child *c2 = dynamic_cast<child*>(it1->second);
+
+if(c2)
+  c2->f1();
+else
+  cout<<"badcast"<<endl;
+return 0;
+}
